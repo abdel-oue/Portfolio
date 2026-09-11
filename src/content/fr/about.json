@@ -1,8 +1,9 @@
 {
   "heading": "À propos",
   "paragraphs": [
-    "Je conçois et livre des logiciels de bout en bout — architecture backend, pipelines RAG et les interfaces qui s'appuient dessus. Transinaut, un SaaS de classification douanière conçu et livré seul, tourne aujourd'hui en production sur www.transinaut.com. En parallèle, j'ai co-développé Chronicler, un assistant documentaire capable de fonctionner hors ligne, en équipe de trois.",
-    "Actuellement en Master Ingénierie des Systèmes d'Information & Intelligence Artificielle à l'ESISA, Fès. Recherche un stage en développement logiciel."
+    "J'écris des systèmes backend et les interfaces qui vont avec. L'essentiel de mon temps passe dans les pipelines de recherche documentaire : faire répondre un modèle à partir d'un corpus précis plutôt que de ce qu'il croit savoir.",
+    "Transinaut est celui qui paie son propre serveur. Je l'ai conçu, développé et mis en ligne seul, et il classe des codes douaniers pour des transitaires depuis début 2026. Chronicler, mon projet de fin d'année, fait la même chose hors ligne, pour les entreprises qui ne peuvent pas envoyer un contrat à une API dans le cloud.",
+    "Je suis en première année de Master Ingénierie des Systèmes d'Information et Intelligence Artificielle à l'ESISA, à Fès, et je cherche un stage en développement logiciel."
   ],
   "details": [
     {

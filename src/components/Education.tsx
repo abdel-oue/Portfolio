@@ -36,7 +36,7 @@ export default function Education({
 }) {
   return (
     <Section id="education" heading={education.heading}>
-      <Group heading={education.heading} items={education.entries} />
+      <Group heading={education.entriesHeading} items={education.entries} />
       <Group
         heading={education.certificationsHeading}
         items={education.certifications}

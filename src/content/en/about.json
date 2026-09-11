@@ -1,8 +1,9 @@
 {
   "heading": "About",
   "paragraphs": [
-    "I build production software end to end — backend architecture, RAG pipelines and the interfaces on top of them. Transinaut, a customs classification SaaS I designed and shipped alone, runs in production today at www.transinaut.com. Alongside it I co-built Chronicler, an offline-capable document assistant, with a team of three.",
-    "Currently a Master's student in Information Systems Engineering & Artificial Intelligence at ESISA, Fez. Seeking a software development internship."
+    "I write backend systems and the interfaces that sit on them. Most of my time goes to retrieval pipelines: getting a model to answer from a specific set of documents instead of from whatever it remembers.",
+    "Transinaut is the one that pays rent on its own server. I designed it, built it and shipped it alone, and it has been classifying customs codes for freight forwarders since early 2026. Chronicler, my final-year project, does the same trick offline for companies that cannot send a contract to a cloud API.",
+    "I am in the first year of a Master's in Information Systems Engineering and AI at ESISA in Fez, and I am looking for a software development internship."
   ],
   "details": [
     {

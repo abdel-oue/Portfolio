@@ -1,0 +1,116 @@
+{
+  "heading": "Projects",
+  "groups": [
+    {
+      "id": "personal",
+      "label": "Personal",
+      "projects": [
+        {
+          "title": "Transinaut",
+          "subtitle": null,
+          "role": "Sole designer and developer",
+          "period": "November 2025 – Present",
+          "stack": "TypeScript, Next.js, React, Node.js, Supabase, PostgreSQL, Qdrant, Redis (Upstash)",
+          "href": "https://www.transinaut.com",
+          "link": "Live at www.transinaut.com",
+          "points": [
+            "A customs classification SaaS for freight forwarders in Morocco, Canada and Australia. It returns 10-digit HS codes, keeps conversation history per company, and bills by subscription through Polar. I built all of it: product, backend, frontend, deployment.",
+            "The retrieval path runs four models. OpenAI reformulates the query, Cohere embed-v4 turns it into a vector, Qdrant searches, Cohere rerank-v3.5 reorders the hits. It runs on a dedicated Node.js backend on a VPS, proxied through Next.js 16 and React 19.",
+            "Tenants are isolated per company in Supabase, with Polar webhooks driving entitlement. Auth is httpOnly JWT, requests are rate-limited in Redis (Upstash), signup is behind reCAPTCHA v3, CORS is locked to known origins, and PII is masked before anything reaches the logs.",
+            "Between February and August 2026 the platform saw roughly 1,600 unique visitors and 4,500 views."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "academic",
+      "label": "Academic",
+      "projects": [
+        {
+          "title": "Chronicler",
+          "subtitle": "Chat with your own documents, cloud or self-hosted",
+          "role": "Final-year project (PFA), team of 3",
+          "period": "March 2026 – Present",
+          "stack": "Electron, Next.js, React, TypeScript, FastAPI, Python, PostgreSQL, pgvector, Docker",
+          "href": "https://github.com/ChroniclerLM/Releases",
+          "link": null,
+          "points": [
+            "Ships as a signed Windows installer with a built-in auto-updater. The backend is one `docker compose up -d`: FastAPI on port 8410, PostgreSQL with pgvector, and optional Ollama for local models. It runs on 2 CPU and 4 GB of RAM, 8 GB if you host the model yourself.",
+            "Self-hosted mode is the point. Embeddings, retrieval and generation all stay on the client's own infrastructure, which is what got us in the room with companies that will not send a contract to a third-party API. Demos brought in 11 signed letters of intent.",
+            "Behind it: 188 async FastAPI endpoints, JWT auth, 18 migrations and 22 test modules. Collections take PDF, DOCX, XLSX and PPTX, and every answer cites the document it came from. macOS and Linux builds are not done yet."
+          ]
+        },
+        {
+          "title": "Python checkers",
+          "subtitle": "10×10 draughts with a minimax opponent",
+          "role": "Personal build, solo",
+          "period": "",
+          "stack": "Python, pygame",
+          "href": "https://github.com/abdel-oue/Python-checkers",
+          "link": null,
+          "points": [
+            "International draughts on a 10×10 board, drawn in pygame. The board is a nested list and every square is one signed integer: 1 and 2 for the two sides' pawns, negative for kings, 0 for empty. Colour, rank and emptiness all read off one number.",
+            "Captures are the hard part. `evalpiece` recurses into itself after each jump, so a chain of takes comes back as a full path like [(2,3),(4,5)] instead of a single destination, and the same recursion feeds both the human's move highlighting and the AI's move list.",
+            "The opponent is minimax, three plies deep by default, scoring material at 1 for a pawn and 3 for a king. Each candidate move is played on a copied board so the real game state is never touched during the search."
+          ]
+        },
+        {
+          "title": "Pixel-Man",
+          "subtitle": "Animated character in x86 assembly",
+          "role": "Assembly coursework",
+          "period": "",
+          "stack": "x86 assembly, BIOS interrupts",
+          "href": "https://github.com/abdel-oue/Pixel-Man",
+          "link": null,
+          "points": [
+            "A character drawn and animated pixel by pixel in x86 assembly, writing to the screen through BIOS interrupts with no graphics library and no OS layer in between.",
+            "Everything above a single pixel had to be written first: the line routine, then Circle.asm, Square.asm and Triangle.asm as separate modules.",
+            "Project.asm composes those primitives into the figure and steps it through its animation frames."
+          ]
+        },
+        {
+          "title": "Mastercard stock trend analysis",
+          "subtitle": null,
+          "role": "Data analysis project",
+          "period": "January 2026",
+          "stack": "R",
+          "href": null,
+          "link": null,
+          "points": [
+            "Exploratory analysis of Mastercard's historical stock data, looking at correlations between price movement and trading volume.",
+            "Linear regression in R to model the trend and pick out repeating market patterns.",
+            "Most of the work was the unglamorous part: filling missing values, normalising the series, and restructuring the raw dataset into something modelable."
+          ]
+        },
+        {
+          "title": "Chess game in Qt",
+          "subtitle": null,
+          "role": "Desktop application project",
+          "period": "March – June 2025",
+          "stack": "C++, Qt, SQL",
+          "href": null,
+          "link": null,
+          "points": [
+            "A full chess implementation in C++ with a Qt interface.",
+            "The rules engine handles move generation, captures, and the state checks that are easy to get wrong: check, checkmate and stalemate.",
+            "An SQL database stores saved games, player profiles and match statistics."
+          ]
+        },
+        {
+          "title": "Student management system",
+          "subtitle": null,
+          "role": "Console application project",
+          "period": "February – June 2024",
+          "stack": "C",
+          "href": "https://github.com/abdel-oue/Gestion-etudiant",
+          "link": null,
+          "points": [
+            "A C console application for student records: grades, modules and semesters, split across headers by concern (Structure.h, Module.h, Notes.h, Semestres.h, Fichiers.h).",
+            "Records persist to binary files rather than dying with the process, so the data survives a restart.",
+            "Halfway through I rewrote the record handling to use pointers. The repository still carries the folder named \"Backup before pointers\", which is roughly where I learned what pointers were for."
+          ]
+        }
+      ]
+    }
+  ]
+}

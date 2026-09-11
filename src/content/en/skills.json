@@ -1,11 +1,36 @@
 {
   "heading": "Skills",
+  "legend": "Full strength is what I use daily. Dimmed is what I can work in.",
   "groups": [
-    { "label": "Languages", "items": "C, C++, C#, Python, JavaScript, TypeScript, Java, SQL, HTML5, CSS, Bash, x86 Assembly" },
-    { "label": "Frameworks", "items": "Next.js, React, FastAPI, Node.js, Electron" },
-    { "label": "Data & DevOps", "items": "PostgreSQL, MySQL, MongoDB, Supabase, Qdrant, Redis (Upstash), Docker, Git, Linux/Unix, VPS deployment" },
-    { "label": "AI & ML", "items": "RAG pipelines, vector search, prompt engineering, LLM integration (OpenAI, Gemini, Ollama), embeddings, multi-model orchestration" },
-    { "label": "Security", "items": "JWT authentication, rate limiting, reCAPTCHA, CORS, PII handling" },
-    { "label": "Architecture", "items": "OOP, data structures & algorithms, system design, multi-tenant architecture, REST APIs, UML, embedded systems, microservices, .NET" }
+    {
+      "label": "Languages",
+      "strong": "TypeScript, JavaScript, Python, SQL, HTML5, CSS, Bash",
+      "working": "C, C++, C#, Java, x86 Assembly"
+    },
+    {
+      "label": "Frameworks",
+      "strong": "Next.js, React, Node.js, FastAPI",
+      "working": "Electron, Qt, .NET"
+    },
+    {
+      "label": "Data & DevOps",
+      "strong": "PostgreSQL, Supabase, Qdrant, Redis (Upstash), Docker, Git, Linux/Unix, VPS deployment",
+      "working": "MySQL, MongoDB"
+    },
+    {
+      "label": "AI & ML",
+      "strong": "RAG pipelines, vector search, prompt engineering, LLM integration (OpenAI, Gemini, Ollama), embeddings, multi-model orchestration",
+      "working": "R, statistical modelling"
+    },
+    {
+      "label": "Security",
+      "strong": "JWT authentication, rate limiting, reCAPTCHA, CORS, PII handling",
+      "working": ""
+    },
+    {
+      "label": "Architecture",
+      "strong": "OOP, data structures & algorithms, system design, multi-tenant architecture, REST APIs",
+      "working": "UML, microservices, embedded systems"
+    }
   ]
 }

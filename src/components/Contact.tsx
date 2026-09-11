@@ -1,7 +1,14 @@
 import type { Content } from "@/content";
 import Section from "./Section";
+import CvButton from "./CvButton";
 
-export default function Contact({ contact }: { contact: Content["contact"] }) {
+export default function Contact({
+  contact,
+  cv,
+}: {
+  contact: Content["contact"];
+  cv: Content["site"]["cv"];
+}) {
   return (
     <Section id="contact" heading={contact.heading}>
       <p className="max-w-4xl text-lg">{contact.text}</p>
@@ -11,6 +18,9 @@ export default function Contact({ contact }: { contact: Content["contact"] }) {
       >
         {contact.email}
       </a>
+      <div className="mt-8">
+        <CvButton cv={cv} />
+      </div>
       <ul className="mt-10 flex flex-wrap gap-6 text-sm">
         {contact.links.map((l) => (
           <li key={l.href}>

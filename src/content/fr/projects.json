@@ -1,0 +1,116 @@
+{
+  "heading": "Projets",
+  "groups": [
+    {
+      "id": "personal",
+      "label": "Personnels",
+      "projects": [
+        {
+          "title": "Transinaut",
+          "subtitle": null,
+          "role": "Concepteur et unique développeur",
+          "period": "Novembre 2025 – Présent",
+          "stack": "TypeScript, Next.js, React, Node.js, Supabase, PostgreSQL, Qdrant, Redis (Upstash)",
+          "href": "https://www.transinaut.com",
+          "link": "En ligne sur www.transinaut.com",
+          "points": [
+            "Un SaaS de classification douanière pour les transitaires au Maroc, au Canada et en Australie. Il renvoie des codes HS à 10 chiffres, conserve l'historique des conversations par entreprise, et facture par abonnement via Polar. J'ai tout construit : produit, backend, frontend, déploiement.",
+            "Le pipeline de recherche enchaîne quatre modèles. OpenAI reformule la requête, Cohere embed-v4 la vectorise, Qdrant cherche, Cohere rerank-v3.5 réordonne les résultats. Le tout tourne sur un backend Node.js dédié sur VPS, proxié via Next.js 16 et React 19.",
+            "Les données sont isolées par entreprise dans Supabase, les droits pilotés par les webhooks Polar. L'authentification passe par des JWT httpOnly, les requêtes sont limitées via Redis (Upstash), l'inscription est protégée par reCAPTCHA v3, le CORS est restreint aux origines connues, et les PII sont masquées avant d'atteindre les logs.",
+            "Entre février et août 2026, la plateforme a reçu environ 1 600 visiteurs uniques et 4 500 vues."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "academic",
+      "label": "Académiques",
+      "projects": [
+        {
+          "title": "Chronicler",
+          "subtitle": "Dialoguer avec ses propres documents, en cloud ou auto-hébergé",
+          "role": "Projet de fin d'année (PFA), équipe de 3",
+          "period": "Mars 2026 – Présent",
+          "stack": "Electron, Next.js, React, TypeScript, FastAPI, Python, PostgreSQL, pgvector, Docker",
+          "href": "https://github.com/ChroniclerLM/Releases",
+          "link": null,
+          "points": [
+            "Livré sous forme d'installeur Windows signé, avec mise à jour automatique intégrée. Le backend tient en un `docker compose up -d` : FastAPI sur le port 8410, PostgreSQL avec pgvector, et Ollama en option pour les modèles locaux. Il tourne sur 2 CPU et 4 Go de RAM, 8 Go si le modèle est hébergé localement.",
+            "Le mode auto-hébergé est tout l'intérêt. Vectorisation, recherche et génération restent sur l'infrastructure du client, ce qui nous a ouvert la porte d'entreprises qui n'enverront jamais un contrat à une API tierce. Les démonstrations ont abouti à 11 lettres d'intention signées.",
+            "Derrière : 188 endpoints FastAPI asynchrones, authentification JWT, 18 migrations et 22 modules de tests. Les collections acceptent PDF, DOCX, XLSX et PPTX, et chaque réponse cite le document dont elle provient. Les builds macOS et Linux ne sont pas encore faits."
+          ]
+        },
+        {
+          "title": "Jeu de dames en Python",
+          "subtitle": "Damier 10×10 avec adversaire minimax",
+          "role": "Projet personnel, en solo",
+          "period": "",
+          "stack": "Python, pygame",
+          "href": "https://github.com/abdel-oue/Python-checkers",
+          "link": null,
+          "points": [
+            "Dames internationales sur un damier 10×10, dessiné avec pygame. Le plateau est une liste de listes et chaque case tient dans un entier signé : 1 et 2 pour les pions des deux camps, négatif pour les dames, 0 pour le vide. Couleur, rang et vacuité se lisent sur un seul nombre.",
+            "Les prises sont la vraie difficulté. `evalpiece` s'appelle récursivement après chaque saut : une rafle revient donc sous forme de chemin complet, [(2,3),(4,5)], et non d'une simple case d'arrivée. La même récursion alimente l'aide au coup du joueur et la liste de coups de l'IA.",
+            "L'adversaire est un minimax à trois niveaux par défaut, évaluant le matériel à 1 pour un pion et 3 pour une dame. Chaque coup candidat est joué sur une copie du plateau, l'état réel de la partie n'est jamais touché pendant la recherche."
+          ]
+        },
+        {
+          "title": "Pixel-Man",
+          "subtitle": "Personnage animé en assembleur x86",
+          "role": "Projet d'assembleur",
+          "period": "",
+          "stack": "Assembleur x86, interruptions BIOS",
+          "href": "https://github.com/abdel-oue/Pixel-Man",
+          "link": null,
+          "points": [
+            "Un personnage dessiné et animé pixel par pixel en assembleur x86, affiché via les interruptions BIOS, sans bibliothèque graphique ni couche système entre le code et l'écran.",
+            "Tout ce qui dépasse le pixel unique a dû être écrit d'abord : le tracé de ligne, puis Circle.asm, Square.asm et Triangle.asm comme modules séparés.",
+            "Project.asm assemble ces primitives en figure et la fait défiler image par image."
+          ]
+        },
+        {
+          "title": "Analyse des tendances boursières Mastercard",
+          "subtitle": null,
+          "role": "Projet d'analyse de données",
+          "period": "Janvier 2026",
+          "stack": "R",
+          "href": null,
+          "link": null,
+          "points": [
+            "Analyse exploratoire des données boursières historiques de Mastercard, en cherchant les corrélations entre mouvements de prix et volumes d'échange.",
+            "Régression linéaire sous R pour modéliser la tendance et repérer les motifs de marché récurrents.",
+            "L'essentiel du travail a été la partie ingrate : combler les valeurs manquantes, normaliser les séries, et restructurer le jeu de données brut pour le rendre modélisable."
+          ]
+        },
+        {
+          "title": "Jeu d'échecs en Qt",
+          "subtitle": null,
+          "role": "Projet d'application bureau",
+          "period": "Mars – Juin 2025",
+          "stack": "C++, Qt, SQL",
+          "href": null,
+          "link": null,
+          "points": [
+            "Une implémentation complète des échecs en C++ avec une interface Qt.",
+            "Le moteur de règles gère la génération des coups, les captures, et les contrôles d'état faciles à rater : échec, échec et mat, pat.",
+            "Une base SQL stocke les parties sauvegardées, les profils joueurs et les statistiques."
+          ]
+        },
+        {
+          "title": "Système de gestion des étudiants",
+          "subtitle": null,
+          "role": "Projet d'application console",
+          "period": "Février – Juin 2024",
+          "stack": "C",
+          "href": "https://github.com/abdel-oue/Gestion-etudiant",
+          "link": null,
+          "points": [
+            "Une application console en C pour les dossiers étudiants : notes, modules et semestres, répartie en en-têtes par responsabilité (Structure.h, Module.h, Notes.h, Semestres.h, Fichiers.h).",
+            "Les enregistrements sont persistés dans des fichiers binaires plutôt que de mourir avec le processus : les données survivent à un redémarrage.",
+            "À mi-parcours, j'ai réécrit la gestion des enregistrements avec des pointeurs. Le dépôt contient encore le dossier « Backup before pointers », soit à peu près le moment où j'ai compris à quoi servaient les pointeurs."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,11 +3,46 @@
   "title": "Abdelaziz Ouedghiri — Ingénieur Logiciel",
   "description": "Ingénierie logicielle — backend et IA appliquée. Concepteur et unique développeur de Transinaut, SaaS full-stack de classification douanière en production.",
   "nav": [
-    { "label": "À propos", "href": "#about" },
-    { "label": "Projets", "href": "#work" },
-    { "label": "Expériences", "href": "#experience" },
-    { "label": "Compétences", "href": "#skills" },
-    { "label": "Formation", "href": "#education" },
-    { "label": "Me contacter", "href": "#contact" }
-  ]
+    {
+      "label": "À propos",
+      "href": "#about"
+    },
+    {
+      "label": "Projets",
+      "href": "#projects"
+    },
+    {
+      "label": "Expériences",
+      "href": "#experience"
+    },
+    {
+      "label": "Compétences",
+      "href": "#skills"
+    },
+    {
+      "label": "Formation",
+      "href": "#education"
+    },
+    {
+      "label": "Me contacter",
+      "href": "#contact"
+    }
+  ],
+  "cv": {
+    "label": "Télécharger le CV",
+    "modalTitle": "Dans quelle langue ?",
+    "close": "Fermer",
+    "files": [
+      {
+        "lang": "Français",
+        "href": "/cv/abdelaziz-ouedghiri-cv-fr.pdf",
+        "note": "PDF, 1 page"
+      },
+      {
+        "lang": "English",
+        "href": "/cv/abdelaziz-ouedghiri-cv-en.pdf",
+        "note": "PDF, 1 page"
+      }
+    ]
+  }
 }

@@ -13,7 +13,18 @@ export async function generateMetadata({
   params,
 }: LayoutProps<"/[lang]">): Promise<Metadata> {
   const { site } = content[(await params).lang as Locale];
-  return { title: site.title, description: site.description };
+  return {
+    title: site.title,
+    description: site.description,
+    icons: {
+      icon: [
+        { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      ],
+      apple: { url: "/favicon/apple-touch-icon.png", sizes: "76x76" },
+    },
+  };
 }
 
 // Set the theme before first paint so the page never flashes the wrong one.

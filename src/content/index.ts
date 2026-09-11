@@ -1,7 +1,7 @@
 import enSite from "./en/site.json";
 import enHero from "./en/hero.json";
 import enAbout from "./en/about.json";
-import enWork from "./en/work.json";
+import enProjects from "./en/projects.json";
 import enExperience from "./en/experience.json";
 import enSkills from "./en/skills.json";
 import enEducation from "./en/education.json";
@@ -10,7 +10,7 @@ import enContact from "./en/contact.json";
 import frSite from "./fr/site.json";
 import frHero from "./fr/hero.json";
 import frAbout from "./fr/about.json";
-import frWork from "./fr/work.json";
+import frProjects from "./fr/projects.json";
 import frExperience from "./fr/experience.json";
 import frSkills from "./fr/skills.json";
 import frEducation from "./fr/education.json";
@@ -24,7 +24,7 @@ export const content = {
     site: enSite,
     hero: enHero,
     about: enAbout,
-    work: enWork,
+    projects: enProjects,
     experience: enExperience,
     skills: enSkills,
     education: enEducation,
@@ -34,7 +34,7 @@ export const content = {
     site: frSite,
     hero: frHero,
     about: frAbout,
-    work: frWork,
+    projects: frProjects,
     experience: frExperience,
     skills: frSkills,
     education: frEducation,
