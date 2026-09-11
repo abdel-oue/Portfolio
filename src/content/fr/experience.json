@@ -1,0 +1,28 @@
+{
+  "heading": "Expériences",
+  "roles": [
+    {
+      "title": "Stage Ingénierie Produit",
+      "company": "EcoNextGen",
+      "location": "Fès, Maroc (Télétravail)",
+      "period": "Juillet – Août 2026",
+      "points": [
+        "Testé fonctionnellement une plateforme e-commerce pilotée par WhatsApp intégrant un agent IA, destinée aux commerçants marocains : conception de scénarios de test, identification et documentation des anomalies avant mise en production.",
+        "Audité les canaux d'acquisition publicitaire (Click-to-WhatsApp Ads, benchmarks CPM) et livré un rapport de stratégie Meta Ads structurant l'approche d'acquisition client de la plateforme.",
+        "Conçu et présenté un modèle de monétisation à trois paliers à l'équipe produit, en amont du lancement commercial."
+      ]
+    },
+    {
+      "title": "Stage Développeur Web",
+      "company": "AYA Intercontinental",
+      "location": "Fès, Maroc (Télétravail)",
+      "period": "Février – Avril 2025",
+      "points": [
+        "Conception et développement autonome d'un site vitrine responsive en HTML5, CSS3 et JavaScript pour une entreprise cliente, en assurant l'intégralité du cycle de développement.",
+        "Intégration de fonctionnalités interactives en JavaScript : animations, sidebar de navigation, formulaire de contact et intégration cartographique.",
+        "Déploiement et maintenance du site en production via Git et SFTP, avec suivi régulier des évolutions demandées par le client.",
+        "Stage réalisé à distance durant la période scolaire, nécessitant une gestion autonome des priorités et des délais."
+      ]
+    }
+  ]
+}

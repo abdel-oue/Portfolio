@@ -1,0 +1,22 @@
+{
+  "heading": "Formation",
+  "entries": [
+    { "title": "Master Ingénierie des Systèmes d'Information & Intelligence Artificielle (IS2IA)", "place": "ESISA — École Supérieure d'Ingénierie en Sciences Appliquées, Fès", "period": "Septembre 2026 – Présent" },
+    { "title": "Licence Ingénierie Logicielle", "place": "ESISA — École Supérieure d'Ingénierie en Sciences Appliquées, Fès", "period": "Septembre 2023 – Juin 2026" },
+    { "title": "SMI — Sciences Mathématiques et Informatiques", "place": "Université Sidi Mohamed Ben Abdellah, Fès", "period": "Septembre 2022 – Juin 2023" },
+    { "title": "Baccalauréat — Sciences Physiques et Chimie", "place": "Lycée Moulay Slimane, Fès", "period": "Septembre 2021 – Juin 2022" }
+  ],
+  "certificationsHeading": "Certifications",
+  "certifications": [
+    { "title": "Intermediate PostgreSQL — University of Michigan, Coursera (en cours)", "period": "Septembre 2026" },
+    { "title": "Programme AFWAJ — Accompagnement entrepreneurial, CRI (Centre Régional d'Investissement) Fès-Meknès", "period": "Septembre 2025" }
+  ],
+  "activitiesHeading": "Activités",
+  "activities": [
+    { "title": "Président, Club Gaming ESISA — organisation d'événements et coordination de l'équipe", "period": "Avril 2026 – Présent" },
+    { "title": "Membre, Club Charity ESISA — collectes de fonds et actions caritatives", "period": "Novembre 2025 – Présent" },
+    { "title": "Secrétaire, Club Cinéma ESISA — gestion administrative et organisation des séances", "period": "Septembre 2024 – Février 2025" },
+    { "title": "Staff, Hackathon ESISA Junior 2ème Édition — co-organisation et logistique", "period": "Avril 2026" },
+    { "title": "Compétiteur, Hackathon ESISA Senior (équipe) — 8ème place", "period": "Juin 2025" }
+  ]
+}

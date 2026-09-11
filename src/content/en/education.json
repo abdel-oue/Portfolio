@@ -1,0 +1,22 @@
+{
+  "heading": "Education",
+  "entries": [
+    { "title": "Master's in Information Systems Engineering & Artificial Intelligence (IS2IA)", "place": "ESISA — Higher School of Engineering in Applied Sciences, Fez", "period": "September 2026 – Present" },
+    { "title": "Bachelor's in Software Engineering", "place": "ESISA — Higher School of Engineering in Applied Sciences, Fez", "period": "September 2023 – June 2026" },
+    { "title": "SMI — Mathematics and Computer Science", "place": "Sidi Mohamed Ben Abdellah University, Fez", "period": "September 2022 – June 2023" },
+    { "title": "Baccalaureate — Physics and Chemistry", "place": "Lycée Moulay Slimane, Fez", "period": "September 2021 – June 2022" }
+  ],
+  "certificationsHeading": "Certifications",
+  "certifications": [
+    { "title": "Intermediate PostgreSQL — University of Michigan, Coursera (in progress)", "period": "September 2026" },
+    { "title": "AFWAJ Program — Entrepreneurial support, CRI (Regional Investment Center) Fès-Meknès", "period": "September 2025" }
+  ],
+  "activitiesHeading": "Activities",
+  "activities": [
+    { "title": "President, ESISA Gaming Club — event organization and team coordination", "period": "April 2026 – Present" },
+    { "title": "Member, ESISA Charity Club — fundraisers and charity actions", "period": "November 2025 – Present" },
+    { "title": "Secretary, ESISA Cinema Club — administration and screening organization", "period": "September 2024 – February 2025" },
+    { "title": "Staff, ESISA Junior Hackathon 2nd Edition — co-organization and logistics", "period": "April 2026" },
+    { "title": "Competitor, ESISA Senior Hackathon (team) — 8th place", "period": "June 2025" }
+  ]
+}

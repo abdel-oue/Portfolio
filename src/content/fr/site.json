@@ -1,0 +1,13 @@
+{
+  "name": "Abdelaziz Ouedghiri",
+  "title": "Abdelaziz Ouedghiri — Ingénieur Logiciel",
+  "description": "Ingénierie logicielle — backend et IA appliquée. Concepteur et unique développeur de Transinaut, SaaS full-stack de classification douanière en production.",
+  "nav": [
+    { "label": "À propos", "href": "#about" },
+    { "label": "Projets", "href": "#work" },
+    { "label": "Expériences", "href": "#experience" },
+    { "label": "Compétences", "href": "#skills" },
+    { "label": "Formation", "href": "#education" },
+    { "label": "Me contacter", "href": "#contact" }
+  ]
+}

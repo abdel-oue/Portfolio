@@ -12,7 +12,7 @@ export default function Section({
       id={id}
       className="border-t border-black/10 px-6 py-20 sm:px-10 dark:border-white/15"
     >
-      <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-[8rem_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-[10rem_1fr]">
         <h2 className="text-sm opacity-60">{heading}</h2>
         <div>{children}</div>
       </div>

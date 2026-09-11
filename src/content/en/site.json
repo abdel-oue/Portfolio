@@ -1,0 +1,13 @@
+{
+  "name": "Abdelaziz Ouedghiri",
+  "title": "Abdelaziz Ouedghiri — Software Engineer",
+  "description": "Software engineer — backend and applied AI. Sole designer and developer of Transinaut, a full-stack customs classification SaaS in production.",
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Work", "href": "#work" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Education", "href": "#education" },
+    { "label": "Get in touch", "href": "#contact" }
+  ]
+}

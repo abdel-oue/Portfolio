@@ -1,0 +1,11 @@
+{
+  "heading": "Skills",
+  "groups": [
+    { "label": "Languages", "items": "C, C++, C#, Python, JavaScript, TypeScript, Java, SQL, HTML5, CSS, Bash, x86 Assembly" },
+    { "label": "Frameworks", "items": "Next.js, React, FastAPI, Node.js, Electron" },
+    { "label": "Data & DevOps", "items": "PostgreSQL, MySQL, MongoDB, Supabase, Qdrant, Redis (Upstash), Docker, Git, Linux/Unix, VPS deployment" },
+    { "label": "AI & ML", "items": "RAG pipelines, vector search, prompt engineering, LLM integration (OpenAI, Gemini, Ollama), embeddings, multi-model orchestration" },
+    { "label": "Security", "items": "JWT authentication, rate limiting, reCAPTCHA, CORS, PII handling" },
+    { "label": "Architecture", "items": "OOP, data structures & algorithms, system design, multi-tenant architecture, REST APIs, UML, embedded systems, microservices, .NET" }
+  ]
+}

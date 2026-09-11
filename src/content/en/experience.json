@@ -1,0 +1,28 @@
+{
+  "heading": "Experience",
+  "roles": [
+    {
+      "title": "Product Engineering Intern",
+      "company": "EcoNextGen",
+      "location": "Fez, Morocco (Remote)",
+      "period": "July – August 2026",
+      "points": [
+        "Functionally tested a WhatsApp-driven e-commerce platform with an integrated AI agent, built for Moroccan merchants: designed test scenarios, identified and documented bugs before production release.",
+        "Audited advertising acquisition channels (Click-to-WhatsApp Ads, CPM benchmarks) and delivered a Meta Ads strategy report shaping the platform's customer acquisition approach.",
+        "Designed and presented a three-tier monetization model to the product team ahead of commercial launch."
+      ]
+    },
+    {
+      "title": "Web Developer Intern",
+      "company": "AYA Intercontinental",
+      "location": "Fez, Morocco (Remote)",
+      "period": "February – April 2025",
+      "points": [
+        "Independently designed and developed a responsive showcase website in HTML5, CSS3 and JavaScript for a client company, handling the entire development cycle.",
+        "Integrated interactive JavaScript features: animations, navigation sidebar, contact form and map integration.",
+        "Deployed and maintained the site in production via Git and SFTP, with regular follow-up on client-requested changes.",
+        "Completed remotely during the school term, requiring independent management of priorities and deadlines."
+      ]
+    }
+  ]
+}

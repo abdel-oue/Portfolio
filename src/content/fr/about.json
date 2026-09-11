@@ -1,0 +1,25 @@
+{
+  "heading": "À propos",
+  "paragraphs": [
+    "Je conçois et livre des logiciels de bout en bout — architecture backend, pipelines RAG et les interfaces qui s'appuient dessus. Transinaut, un SaaS de classification douanière conçu et livré seul, tourne aujourd'hui en production sur www.transinaut.com. En parallèle, j'ai co-développé Chronicler, un assistant documentaire capable de fonctionner hors ligne, en équipe de trois.",
+    "Actuellement en Master Ingénierie des Systèmes d'Information & Intelligence Artificielle à l'ESISA, Fès. Recherche un stage en développement logiciel."
+  ],
+  "details": [
+    {
+      "label": "Basé à",
+      "value": "Fès, Maroc · Mobilité Casablanca"
+    },
+    {
+      "label": "Domaines",
+      "value": "Architecture backend, IA appliquée, full-stack"
+    },
+    {
+      "label": "Stack",
+      "value": "TypeScript, Next.js, Node.js, Python, FastAPI, PostgreSQL, Docker"
+    },
+    {
+      "label": "Langues",
+      "value": "Arabe (maternelle), Anglais (courant), Français (DELF B2)"
+    }
+  ]
+}

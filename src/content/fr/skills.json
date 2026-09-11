@@ -1,0 +1,11 @@
+{
+  "heading": "Compétences",
+  "groups": [
+    { "label": "Langages", "items": "C, C++, C#, Python, JavaScript, TypeScript, Java, SQL, HTML5, CSS, Bash, Assembleur x86" },
+    { "label": "Frameworks", "items": "Next.js, React, FastAPI, Node.js, Electron" },
+    { "label": "Données & DevOps", "items": "PostgreSQL, MySQL, MongoDB, Supabase, Qdrant, Redis (Upstash), Docker, Git, Linux/Unix, déploiement VPS" },
+    { "label": "IA & ML", "items": "Pipelines RAG, recherche vectorielle, prompt engineering, intégration LLM (OpenAI, Gemini, Ollama), embeddings, orchestration multi-modèles" },
+    { "label": "Sécurité", "items": "Authentification JWT, rate limiting, reCAPTCHA, CORS, gestion des PII" },
+    { "label": "Architecture", "items": "POO, structures de données & algorithmes, conception de systèmes, architecture multi-tenant, APIs REST, UML, systèmes embarqués, microservices, .NET" }
+  ]
+}

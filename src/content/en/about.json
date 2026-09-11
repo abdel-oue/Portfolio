@@ -1,0 +1,25 @@
+{
+  "heading": "About",
+  "paragraphs": [
+    "I build production software end to end — backend architecture, RAG pipelines and the interfaces on top of them. Transinaut, a customs classification SaaS I designed and shipped alone, runs in production today at www.transinaut.com. Alongside it I co-built Chronicler, an offline-capable document assistant, with a team of three.",
+    "Currently a Master's student in Information Systems Engineering & Artificial Intelligence at ESISA, Fez. Seeking a software development internship."
+  ],
+  "details": [
+    {
+      "label": "Based in",
+      "value": "Fez, Morocco · Open to Casablanca"
+    },
+    {
+      "label": "Focus",
+      "value": "Backend architecture, applied AI, full-stack"
+    },
+    {
+      "label": "Stack",
+      "value": "TypeScript, Next.js, Node.js, Python, FastAPI, PostgreSQL, Docker"
+    },
+    {
+      "label": "Languages",
+      "value": "Arabic (native), English (full professional), French (DELF B2)"
+    }
+  ]
+}

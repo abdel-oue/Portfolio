@@ -1,0 +1,19 @@
+{
+  "heading": "Me contacter",
+  "text": "À la recherche d'un stage en développement logiciel. Envoyez un brief court ou une description de poste, je vous réponds.",
+  "email": "abdelazizouedghiri10@gmail.com",
+  "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/abd-oued"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/abdel-oue"
+    },
+    {
+      "label": "+212 644-950566",
+      "href": "tel:+212644950566"
+    }
+  ]
+}
