@@ -1,0 +1,12 @@
+{
+  "heading": "About",
+  "paragraphs": [
+    "I design and build interfaces that stay out of the way. Clear type, honest layout, no decoration for its own sake.",
+    "Currently available for freelance and contract work."
+  ],
+  "details": [
+    { "label": "Based in", "value": "Remote" },
+    { "label": "Focus", "value": "Web Design, UX / UI, Front End" },
+    { "label": "Tools", "value": "Figma, Next.js, Tailwind, Webflow" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "heading": "Work",
+  "projects": [
+    {
+      "title": "Project One",
+      "role": "Design & Development",
+      "year": "2025",
+      "description": "A short line about what the project was and what shipped.",
+      "href": "https://example.com"
+    },
+    {
+      "title": "Project Two",
+      "role": "UX / UI",
+      "year": "2024",
+      "description": "A short line about what the project was and what shipped.",
+      "href": "https://example.com"
+    }
+  ]
+}

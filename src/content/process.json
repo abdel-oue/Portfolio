@@ -1,0 +1,8 @@
+{
+  "heading": "Process",
+  "steps": [
+    { "title": "Scope", "description": "We agree on the problem, the constraints, and what done looks like." },
+    { "title": "Design", "description": "Structure and type first, colour last. Reviewed in the browser, not in slides." },
+    { "title": "Build", "description": "Clean, accessible front end. Handed over ready to maintain." }
+  ]
+}

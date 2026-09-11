@@ -1,0 +1,11 @@
+{
+  "name": "Abdel Oue",
+  "title": "Abdel Oue — Portfolio",
+  "description": "Portfolio of Abdel Oue.",
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Work", "href": "#work" },
+    { "label": "Process", "href": "#process" },
+    { "label": "Drop me a line", "href": "#contact" }
+  ]
+}
