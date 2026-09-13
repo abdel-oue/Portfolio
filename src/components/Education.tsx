@@ -1,23 +1,24 @@
 import type { Content } from "@/content";
 import Section from "./Section";
 
-function Group({
+function List({
+  id,
   heading,
   items,
 }: {
+  id: string;
   heading: string;
   items: { title: string; place?: string; period: string }[];
 }) {
   return (
-    <>
-      <h3 className="mt-10 mb-4 text-sm opacity-60 first:mt-0">{heading}</h3>
+    <Section id={id} heading={heading}>
       <ul className="space-y-4">
         {items.map((e) => (
           <li
             key={e.title}
             className="flex flex-col gap-x-6 gap-y-1 sm:flex-row sm:justify-between"
           >
-            <div className="max-w-4xl">
+            <div>
               <p>{e.title}</p>
               {e.place && <p className="text-sm opacity-60">{e.place}</p>}
             </div>
@@ -25,7 +26,7 @@ function Group({
           </li>
         ))}
       </ul>
-    </>
+    </Section>
   );
 }
 
@@ -35,16 +36,27 @@ export default function Education({
   education: Content["education"];
 }) {
   return (
-    <Section id="education" heading={education.heading}>
-      <Group heading={education.entriesHeading} items={education.entries} />
-      <Group
+    <>
+      <List
+        id="education"
+        heading={education.heading}
+        items={education.entries}
+      />
+      <List
+        id="certifications"
         heading={education.certificationsHeading}
         items={education.certifications}
       />
-      <Group
+      <List
+        id="activities"
         heading={education.activitiesHeading}
         items={education.activities}
       />
-    </Section>
+      <List
+        id="organizations"
+        heading={education.organizationsHeading}
+        items={education.organizations}
+      />
+    </>
   );
 }

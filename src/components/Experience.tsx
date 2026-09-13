@@ -18,7 +18,7 @@ export default function Experience({
             <p className="mt-1 text-sm opacity-60">
               {r.company} · {r.location}
             </p>
-            <ul className="mt-4 max-w-4xl space-y-2 text-sm">
+            <ul className="mt-4 space-y-2 text-sm">
               {r.points.map((point) => (
                 <li key={point} className="flex gap-3">
                   <span className="opacity-40">—</span>

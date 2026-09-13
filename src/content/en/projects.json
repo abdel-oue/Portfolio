@@ -18,6 +18,47 @@
             "The retrieval path runs four models. OpenAI reformulates the query, Cohere embed-v4 turns it into a vector, Qdrant searches, Cohere rerank-v3.5 reorders the hits. It runs on a dedicated Node.js backend on a VPS, proxied through Next.js 16 and React 19.",
             "Tenants are isolated per company in Supabase, with Polar webhooks driving entitlement. Auth is httpOnly JWT, requests are rate-limited in Redis (Upstash), signup is behind reCAPTCHA v3, CORS is locked to known origins, and PII is masked before anything reaches the logs.",
             "Between February and August 2026 the platform saw roughly 1,600 unique visitors and 4,500 views."
+          ],
+          "type": "web",
+          "languages": [
+            "TypeScript",
+            "SQL"
+          ]
+        },
+        {
+          "title": "GitHub issue importer",
+          "subtitle": "Turns a markdown backlog into GitHub issues",
+          "role": "Personal tool, solo",
+          "period": "December 2025",
+          "stack": "Node.js, Octokit",
+          "href": "https://github.com/abdel-oue/github-issue-importer",
+          "link": null,
+          "points": [
+            "I had a product backlog of a few hundred items sitting in one markdown file and no intention of pasting them into GitHub one by one. This reads the file and files the issues.",
+            "The parser keys on `#### PREFIX-001: Title` headings and takes everything up to the next item or section as the body. Labels come from two places: the ID prefix through a mapping table (AUTH to auth, SEC to security) and the Status line, emoji stripped, into completed, in-progress or planned.",
+            "Creation runs through Octokit with a 500 ms pause between calls to stay inside the rate limit, and a rejected issue is logged and skipped so one malformed item cannot take down the whole import. It ships in preview mode — you uncomment a single line before it writes anything."
+          ],
+          "type": "tooling",
+          "languages": [
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "Dryaptcha",
+          "subtitle": "Login automation with an OCR CAPTCHA reader",
+          "role": "Personal build, solo",
+          "period": "March – August 2025",
+          "stack": "Node.js, Puppeteer, Tesseract.js",
+          "href": "https://github.com/abdel-oue/Dryaptcha",
+          "link": null,
+          "points": [
+            "Automates a login form guarded by an image CAPTCHA on an account of my own. Puppeteer drives the browser and screenshots the CAPTCHA element, and Tesseract.js reads the characters out of that image before the form is submitted.",
+            "OCR on a CAPTCHA is never reliable, so the script is built around being wrong: it watches for the error message that means a bad code and retries on a timer instead of giving up.",
+            "Credentials are read from a `.env` file, and the selectors for the image, the input and the submit button are documented so the script can be repointed at a different form."
+          ],
+          "type": "tooling",
+          "languages": [
+            "JavaScript"
           ]
         }
       ]
@@ -30,7 +71,7 @@
           "title": "Chronicler",
           "subtitle": "Chat with your own documents, cloud or self-hosted",
           "role": "Final-year project (PFA), team of 3",
-          "period": "March 2026 – Present",
+          "period": "March – August 2026",
           "stack": "Electron, Next.js, React, TypeScript, FastAPI, Python, PostgreSQL, pgvector, Docker",
           "href": "https://github.com/ChroniclerLM/Releases",
           "link": null,
@@ -38,13 +79,94 @@
             "Ships as a signed Windows installer with a built-in auto-updater. The backend is one `docker compose up -d`: FastAPI on port 8410, PostgreSQL with pgvector, and optional Ollama for local models. It runs on 2 CPU and 4 GB of RAM, 8 GB if you host the model yourself.",
             "Self-hosted mode is the point. Embeddings, retrieval and generation all stay on the client's own infrastructure, which is what got us in the room with companies that will not send a contract to a third-party API. Demos brought in 11 signed letters of intent.",
             "Behind it: 188 async FastAPI endpoints, JWT auth, 18 migrations and 22 test modules. Collections take PDF, DOCX, XLSX and PPTX, and every answer cites the document it came from. macOS and Linux builds are not done yet."
+          ],
+          "type": "desktop",
+          "languages": [
+            "TypeScript",
+            "Python",
+            "SQL"
+          ]
+        },
+        {
+          "title": "CaravaGo",
+          "subtitle": "RV and campervan rental marketplace",
+          "role": "Group project, team of 3 — backend and auth",
+          "period": "December 2025 – January 2026",
+          "stack": "React, Vite, Tailwind, Node.js, Express, MongoDB (Mongoose), JWT",
+          "href": "https://github.com/abdel-oue/CaravaGo",
+          "link": null,
+          "points": [
+            "A peer-to-peer marketplace for renting RVs and campervans in Morocco: owners publish a vehicle, renters search by location and dates and book it. I took the backend and the parts of the frontend that talk to it.",
+            "Authentication is mine end to end — registration with email verification, cookie-based JWT sessions, bcrypt hashing and a password reset flow over Nodemailer. The project started on Supabase; I migrated it to MongoDB with Mongoose once the listing shape stopped fitting relational tables.",
+            "Publishing a vehicle is a five-step wizard with validation at each step and drag-and-drop photo upload, sitting on Listing, Booking and Location models. A booking will not be priced until the model has checked that the end date actually falls after the start date."
+          ],
+          "type": "web",
+          "languages": [
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "MealMate",
+          "subtitle": "Meal suggestions from whatever is in your fridge",
+          "role": "Academic project, team of 4 — backend and auth",
+          "period": "October – November 2025",
+          "stack": "Python, FastAPI, Supabase, Google Gemini, HTML/CSS/JavaScript",
+          "href": "https://github.com/houssam-lemrini/mealmate",
+          "link": null,
+          "points": [
+            "A fitness-oriented web app: you list the ingredients you have and your goal, and it comes back with a meal, the steps to cook it, and estimated nutrition. Google Gemini generates the suggestion, with a local fallback generator so the app still answers when no API key is configured.",
+            "I built the FastAPI backend and restructured the repository into api, services and db layers instead of one flat folder. The signup endpoint checks the password confirmation server-side rather than trusting the form to have done it.",
+            "On the frontend I did the login, contact and about pages, and a fair share of the work was unglamorous: chasing down broken navigation between the static pages until the flow held together."
+          ],
+          "type": "web",
+          "languages": [
+            "Python",
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "AuthTrack",
+          "subtitle": "SSH log analyzer with geographic enrichment",
+          "role": "Academic project, solo",
+          "period": "October – November 2025",
+          "stack": "Python, MySQL, matplotlib, ipinfo.io API",
+          "href": "https://github.com/abdel-oue/AuthTrack",
+          "link": null,
+          "points": [
+            "Reads a raw SSH `auth.log` and pulls it apart with three regex patterns, one each for Accepted, Failed and Invalid user lines, recovering the timestamp, user, IP, port and service and turning the syslog date into a real datetime object.",
+            "Each IP is then resolved to a country through the ipinfo.io API and stored in MySQL, so brute-force sources can be counted by country instead of by individual address.",
+            "Two matplotlib dashboards come out of the database: failed and invalid attempts grouped by country, and accepted connections per user per day. Country codes are mapped to full names before anything is plotted."
+          ],
+          "type": "data",
+          "languages": [
+            "Python",
+            "SQL"
+          ]
+        },
+        {
+          "title": "Baby names web scraper",
+          "subtitle": "Scraping ranking tables into MySQL",
+          "role": "Academic project, solo",
+          "period": "October 2025",
+          "stack": "Python, BeautifulSoup, lxml, MySQL",
+          "href": "https://github.com/abdel-oue/bs4-baby-scraper",
+          "link": null,
+          "points": [
+            "Scrapes ten years of baby-name popularity tables, 1990 to 2008, out of saved HTML with BeautifulSoup: rank, male name and female name off each right-aligned table row, and the year off the page heading.",
+            "The results go into two MySQL tables created on demand, and a full year is inserted in one pass with a single commit at the end rather than a round trip per name.",
+            "Every stage writes to `app.log` through the logging module, so a missing file or a rejected insert leaves a line to read instead of a silent hole in the data."
+          ],
+          "type": "data",
+          "languages": [
+            "Python",
+            "SQL"
           ]
         },
         {
           "title": "Python checkers",
           "subtitle": "10×10 draughts with a minimax opponent",
-          "role": "Personal build, solo",
-          "period": "",
+          "role": "Academic project, team of 2",
+          "period": "May – June 2025",
           "stack": "Python, pygame",
           "href": "https://github.com/abdel-oue/Python-checkers",
           "link": null,
@@ -52,13 +174,17 @@
             "International draughts on a 10×10 board, drawn in pygame. The board is a nested list and every square is one signed integer: 1 and 2 for the two sides' pawns, negative for kings, 0 for empty. Colour, rank and emptiness all read off one number.",
             "Captures are the hard part. `evalpiece` recurses into itself after each jump, so a chain of takes comes back as a full path like [(2,3),(4,5)] instead of a single destination, and the same recursion feeds both the human's move highlighting and the AI's move list.",
             "The opponent is minimax, three plies deep by default, scoring material at 1 for a pawn and 3 for a king. Each candidate move is played on a copied board so the real game state is never touched during the search."
+          ],
+          "type": "game",
+          "languages": [
+            "Python"
           ]
         },
         {
           "title": "Pixel-Man",
           "subtitle": "Animated character in x86 assembly",
-          "role": "Assembly coursework",
-          "period": "",
+          "role": "Assembly coursework, team of 2",
+          "period": "February – June 2024",
           "stack": "x86 assembly, BIOS interrupts",
           "href": "https://github.com/abdel-oue/Pixel-Man",
           "link": null,
@@ -66,6 +192,10 @@
             "A character drawn and animated pixel by pixel in x86 assembly, writing to the screen through BIOS interrupts with no graphics library and no OS layer in between.",
             "Everything above a single pixel had to be written first: the line routine, then Circle.asm, Square.asm and Triangle.asm as separate modules.",
             "Project.asm composes those primitives into the figure and steps it through its animation frames."
+          ],
+          "type": "systems",
+          "languages": [
+            "x86 Assembly"
           ]
         },
         {
@@ -74,32 +204,41 @@
           "role": "Data analysis project",
           "period": "January 2026",
           "stack": "R",
-          "href": null,
-          "link": null,
+          "href": "/documents/mastercard-stock-trend-analysis.pdf",
+          "link": "Read the report (PDF)",
           "points": [
             "Exploratory analysis of Mastercard's historical stock data, looking at correlations between price movement and trading volume.",
             "Linear regression in R to model the trend and pick out repeating market patterns.",
             "Most of the work was the unglamorous part: filling missing values, normalising the series, and restructuring the raw dataset into something modelable."
+          ],
+          "type": "data",
+          "languages": [
+            "R"
           ]
         },
         {
           "title": "Chess game in Qt",
           "subtitle": null,
-          "role": "Desktop application project",
+          "role": "Desktop application project, team of 2",
           "period": "March – June 2025",
           "stack": "C++, Qt, SQL",
-          "href": null,
-          "link": null,
+          "href": "https://lnkd.in/p/eCWUHZVA",
+          "link": "See the post",
           "points": [
             "A full chess implementation in C++ with a Qt interface.",
             "The rules engine handles move generation, captures, and the state checks that are easy to get wrong: check, checkmate and stalemate.",
             "An SQL database stores saved games, player profiles and match statistics."
+          ],
+          "type": "game",
+          "languages": [
+            "C++",
+            "SQL"
           ]
         },
         {
           "title": "Student management system",
           "subtitle": null,
-          "role": "Console application project",
+          "role": "Console application project, team of 2",
           "period": "February – June 2024",
           "stack": "C",
           "href": "https://github.com/abdel-oue/Gestion-etudiant",
@@ -108,9 +247,27 @@
             "A C console application for student records: grades, modules and semesters, split across headers by concern (Structure.h, Module.h, Notes.h, Semestres.h, Fichiers.h).",
             "Records persist to binary files rather than dying with the process, so the data survives a restart.",
             "Halfway through I rewrote the record handling to use pointers. The repository still carries the folder named \"Backup before pointers\", which is roughly where I learned what pointers were for."
+          ],
+          "type": "desktop",
+          "languages": [
+            "C"
           ]
         }
       ]
     }
-  ]
+  ],
+  "filters": {
+    "type": "Type",
+    "language": "Language",
+    "all": "All",
+    "empty": "Nothing matches those filters.",
+    "types": {
+      "web": "Web",
+      "desktop": "Desktop",
+      "game": "Game",
+      "data": "Data",
+      "tooling": "Tooling",
+      "systems": "Low-level"
+    }
+  }
 }

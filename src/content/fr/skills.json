@@ -4,8 +4,8 @@
   "groups": [
     {
       "label": "Langages",
-      "strong": "TypeScript, JavaScript, Python, SQL, HTML5, CSS, Bash",
-      "working": "C, C++, C#, Java, Assembleur x86"
+      "strong": "TypeScript, JavaScript, Python, C++, Java, SQL, HTML5, CSS, Bash",
+      "working": "C, C#, Assembleur x86"
     },
     {
       "label": "Frameworks",

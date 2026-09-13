@@ -18,6 +18,47 @@
             "Le pipeline de recherche enchaîne quatre modèles. OpenAI reformule la requête, Cohere embed-v4 la vectorise, Qdrant cherche, Cohere rerank-v3.5 réordonne les résultats. Le tout tourne sur un backend Node.js dédié sur VPS, proxié via Next.js 16 et React 19.",
             "Les données sont isolées par entreprise dans Supabase, les droits pilotés par les webhooks Polar. L'authentification passe par des JWT httpOnly, les requêtes sont limitées via Redis (Upstash), l'inscription est protégée par reCAPTCHA v3, le CORS est restreint aux origines connues, et les PII sont masquées avant d'atteindre les logs.",
             "Entre février et août 2026, la plateforme a reçu environ 1 600 visiteurs uniques et 4 500 vues."
+          ],
+          "type": "web",
+          "languages": [
+            "TypeScript",
+            "SQL"
+          ]
+        },
+        {
+          "title": "Importateur d'issues GitHub",
+          "subtitle": "Transforme un backlog markdown en issues GitHub",
+          "role": "Outil personnel, en solo",
+          "period": "Décembre 2025",
+          "stack": "Node.js, Octokit",
+          "href": "https://github.com/abdel-oue/github-issue-importer",
+          "link": null,
+          "points": [
+            "J'avais un backlog produit de quelques centaines d'éléments dans un seul fichier markdown et aucune envie de les recopier un à un dans GitHub. Cet outil lit le fichier et crée les issues.",
+            "Le parseur repère les titres `#### PREFIX-001: Titre` et prend tout ce qui suit, jusqu'à l'élément ou la section suivante, comme corps. Les labels viennent de deux endroits : le préfixe de l'identifiant via une table de correspondance (AUTH vers auth, SEC vers security) et la ligne Status, emojis retirés, vers completed, in-progress ou planned.",
+            "La création passe par Octokit avec une pause de 500 ms entre les appels pour rester sous la limite de débit, et une issue refusée est journalisée puis ignorée : un élément mal formé ne fait pas tomber tout l'import. L'outil est livré en mode aperçu — il faut décommenter une ligne pour qu'il écrive vraiment."
+          ],
+          "type": "tooling",
+          "languages": [
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "Dryaptcha",
+          "subtitle": "Automatisation de connexion avec lecture OCR du CAPTCHA",
+          "role": "Projet personnel, en solo",
+          "period": "Mars – Août 2025",
+          "stack": "Node.js, Puppeteer, Tesseract.js",
+          "href": "https://github.com/abdel-oue/Dryaptcha",
+          "link": null,
+          "points": [
+            "Automatise un formulaire de connexion protégé par un CAPTCHA image, sur un compte qui m'appartient. Puppeteer pilote le navigateur et capture l'image du CAPTCHA, et Tesseract.js en lit les caractères avant l'envoi du formulaire.",
+            "L'OCR sur un CAPTCHA n'est jamais fiable, donc le script est construit autour de l'erreur : il guette le message qui signale un code incorrect et réessaie après un délai au lieu d'abandonner.",
+            "Les identifiants sont lus depuis un fichier `.env`, et les sélecteurs de l'image, du champ et du bouton d'envoi sont documentés pour pouvoir viser un autre formulaire."
+          ],
+          "type": "tooling",
+          "languages": [
+            "JavaScript"
           ]
         }
       ]
@@ -30,7 +71,7 @@
           "title": "Chronicler",
           "subtitle": "Dialoguer avec ses propres documents, en cloud ou auto-hébergé",
           "role": "Projet de fin d'année (PFA), équipe de 3",
-          "period": "Mars 2026 – Présent",
+          "period": "Mars – Août 2026",
           "stack": "Electron, Next.js, React, TypeScript, FastAPI, Python, PostgreSQL, pgvector, Docker",
           "href": "https://github.com/ChroniclerLM/Releases",
           "link": null,
@@ -38,13 +79,94 @@
             "Livré sous forme d'installeur Windows signé, avec mise à jour automatique intégrée. Le backend tient en un `docker compose up -d` : FastAPI sur le port 8410, PostgreSQL avec pgvector, et Ollama en option pour les modèles locaux. Il tourne sur 2 CPU et 4 Go de RAM, 8 Go si le modèle est hébergé localement.",
             "Le mode auto-hébergé est tout l'intérêt. Vectorisation, recherche et génération restent sur l'infrastructure du client, ce qui nous a ouvert la porte d'entreprises qui n'enverront jamais un contrat à une API tierce. Les démonstrations ont abouti à 11 lettres d'intention signées.",
             "Derrière : 188 endpoints FastAPI asynchrones, authentification JWT, 18 migrations et 22 modules de tests. Les collections acceptent PDF, DOCX, XLSX et PPTX, et chaque réponse cite le document dont elle provient. Les builds macOS et Linux ne sont pas encore faits."
+          ],
+          "type": "desktop",
+          "languages": [
+            "TypeScript",
+            "Python",
+            "SQL"
+          ]
+        },
+        {
+          "title": "CaravaGo",
+          "subtitle": "Place de marché de location de camping-cars",
+          "role": "Projet de groupe, équipe de 3 — backend et authentification",
+          "period": "Décembre 2025 – Janvier 2026",
+          "stack": "React, Vite, Tailwind, Node.js, Express, MongoDB (Mongoose), JWT",
+          "href": "https://github.com/abdel-oue/CaravaGo",
+          "link": null,
+          "points": [
+            "Une place de marché entre particuliers pour louer des camping-cars au Maroc : le propriétaire publie un véhicule, le locataire cherche par lieu et par dates puis réserve. J'ai pris le backend et les parties du frontend qui dialoguent avec lui.",
+            "L'authentification est à moi de bout en bout — inscription avec vérification par e-mail, sessions JWT par cookie, hachage bcrypt et réinitialisation du mot de passe via Nodemailer. Le projet a démarré sur Supabase ; je l'ai migré vers MongoDB avec Mongoose quand la forme des annonces a cessé d'entrer dans des tables relationnelles.",
+            "Publier un véhicule passe par un assistant en cinq étapes, avec validation à chaque étape et dépôt des photos en glisser-déposer, posé sur les modèles Listing, Booking et Location. Une réservation n'est pas chiffrée tant que le modèle n'a pas vérifié que la date de fin tombe bien après la date de début."
+          ],
+          "type": "web",
+          "languages": [
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "MealMate",
+          "subtitle": "Des repas à partir de ce qu'il reste dans le frigo",
+          "role": "Projet académique, équipe de 4 — backend et authentification",
+          "period": "Octobre – Novembre 2025",
+          "stack": "Python, FastAPI, Supabase, Google Gemini, HTML/CSS/JavaScript",
+          "href": "https://github.com/houssam-lemrini/mealmate",
+          "link": null,
+          "points": [
+            "Une application web orientée fitness : on saisit les ingrédients disponibles et son objectif, elle répond par un repas, les étapes de préparation et une estimation nutritionnelle. La suggestion vient de Google Gemini, avec un générateur local de secours pour que l'application réponde quand même sans clé d'API.",
+            "J'ai construit le backend FastAPI et restructuré le dépôt en couches api, services et db plutôt qu'un dossier à plat. L'inscription vérifie la confirmation du mot de passe côté serveur au lieu de faire confiance au formulaire.",
+            "Côté frontend j'ai fait les pages de connexion, de contact et « à propos », et une bonne part du travail a été ingrate : traquer la navigation cassée entre les pages statiques jusqu'à ce que le parcours tienne."
+          ],
+          "type": "web",
+          "languages": [
+            "Python",
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "AuthTrack",
+          "subtitle": "Analyseur de logs SSH avec enrichissement géographique",
+          "role": "Projet académique, en solo",
+          "period": "Octobre – Novembre 2025",
+          "stack": "Python, MySQL, matplotlib, API ipinfo.io",
+          "href": "https://github.com/abdel-oue/AuthTrack",
+          "link": null,
+          "points": [
+            "Lit un `auth.log` SSH brut et le découpe avec trois expressions régulières, une par type de ligne (Accepted, Failed, Invalid user), pour récupérer l'horodatage, l'utilisateur, l'IP, le port et le service, et convertir la date syslog en véritable objet datetime.",
+            "Chaque IP est ensuite rattachée à un pays via l'API ipinfo.io puis stockée dans MySQL, ce qui permet de compter les sources de brute-force par pays plutôt qu'adresse par adresse.",
+            "Deux tableaux de bord matplotlib sortent de la base : les tentatives échouées et invalides regroupées par pays, et les connexions acceptées par utilisateur et par jour. Les codes pays sont convertis en noms complets avant tout tracé."
+          ],
+          "type": "data",
+          "languages": [
+            "Python",
+            "SQL"
+          ]
+        },
+        {
+          "title": "Scraper de prénoms",
+          "subtitle": "Extraction de tableaux de classement vers MySQL",
+          "role": "Projet académique, en solo",
+          "period": "Octobre 2025",
+          "stack": "Python, BeautifulSoup, lxml, MySQL",
+          "href": "https://github.com/abdel-oue/bs4-baby-scraper",
+          "link": null,
+          "points": [
+            "Extrait dix années de classements de prénoms, de 1990 à 2008, depuis des pages HTML enregistrées avec BeautifulSoup : le rang, le prénom masculin et le prénom féminin sur chaque ligne alignée à droite, et l'année dans le titre de la page.",
+            "Les résultats vont dans deux tables MySQL créées à la volée, et une année entière est insérée en une passe avec un seul commit à la fin plutôt qu'un aller-retour par prénom.",
+            "Chaque étape écrit dans `app.log` via le module logging : un fichier manquant ou une insertion refusée laisse une ligne à lire au lieu d'un trou silencieux dans les données."
+          ],
+          "type": "data",
+          "languages": [
+            "Python",
+            "SQL"
           ]
         },
         {
           "title": "Jeu de dames en Python",
           "subtitle": "Damier 10×10 avec adversaire minimax",
-          "role": "Projet personnel, en solo",
-          "period": "",
+          "role": "Projet académique, en binôme",
+          "period": "Mai – Juin 2025",
           "stack": "Python, pygame",
           "href": "https://github.com/abdel-oue/Python-checkers",
           "link": null,
@@ -52,13 +174,17 @@
             "Dames internationales sur un damier 10×10, dessiné avec pygame. Le plateau est une liste de listes et chaque case tient dans un entier signé : 1 et 2 pour les pions des deux camps, négatif pour les dames, 0 pour le vide. Couleur, rang et vacuité se lisent sur un seul nombre.",
             "Les prises sont la vraie difficulté. `evalpiece` s'appelle récursivement après chaque saut : une rafle revient donc sous forme de chemin complet, [(2,3),(4,5)], et non d'une simple case d'arrivée. La même récursion alimente l'aide au coup du joueur et la liste de coups de l'IA.",
             "L'adversaire est un minimax à trois niveaux par défaut, évaluant le matériel à 1 pour un pion et 3 pour une dame. Chaque coup candidat est joué sur une copie du plateau, l'état réel de la partie n'est jamais touché pendant la recherche."
+          ],
+          "type": "game",
+          "languages": [
+            "Python"
           ]
         },
         {
           "title": "Pixel-Man",
           "subtitle": "Personnage animé en assembleur x86",
-          "role": "Projet d'assembleur",
-          "period": "",
+          "role": "Projet d'assembleur, en binôme",
+          "period": "Février – Juin 2024",
           "stack": "Assembleur x86, interruptions BIOS",
           "href": "https://github.com/abdel-oue/Pixel-Man",
           "link": null,
@@ -66,6 +192,10 @@
             "Un personnage dessiné et animé pixel par pixel en assembleur x86, affiché via les interruptions BIOS, sans bibliothèque graphique ni couche système entre le code et l'écran.",
             "Tout ce qui dépasse le pixel unique a dû être écrit d'abord : le tracé de ligne, puis Circle.asm, Square.asm et Triangle.asm comme modules séparés.",
             "Project.asm assemble ces primitives en figure et la fait défiler image par image."
+          ],
+          "type": "systems",
+          "languages": [
+            "x86 Assembly"
           ]
         },
         {
@@ -74,32 +204,41 @@
           "role": "Projet d'analyse de données",
           "period": "Janvier 2026",
           "stack": "R",
-          "href": null,
-          "link": null,
+          "href": "/documents/mastercard-stock-trend-analysis.pdf",
+          "link": "Lire le rapport (PDF)",
           "points": [
             "Analyse exploratoire des données boursières historiques de Mastercard, en cherchant les corrélations entre mouvements de prix et volumes d'échange.",
             "Régression linéaire sous R pour modéliser la tendance et repérer les motifs de marché récurrents.",
             "L'essentiel du travail a été la partie ingrate : combler les valeurs manquantes, normaliser les séries, et restructurer le jeu de données brut pour le rendre modélisable."
+          ],
+          "type": "data",
+          "languages": [
+            "R"
           ]
         },
         {
           "title": "Jeu d'échecs en Qt",
           "subtitle": null,
-          "role": "Projet d'application bureau",
+          "role": "Projet d'application de bureau, en binôme",
           "period": "Mars – Juin 2025",
           "stack": "C++, Qt, SQL",
-          "href": null,
-          "link": null,
+          "href": "https://lnkd.in/p/eCWUHZVA",
+          "link": "Voir la publication",
           "points": [
             "Une implémentation complète des échecs en C++ avec une interface Qt.",
             "Le moteur de règles gère la génération des coups, les captures, et les contrôles d'état faciles à rater : échec, échec et mat, pat.",
             "Une base SQL stocke les parties sauvegardées, les profils joueurs et les statistiques."
+          ],
+          "type": "game",
+          "languages": [
+            "C++",
+            "SQL"
           ]
         },
         {
           "title": "Système de gestion des étudiants",
           "subtitle": null,
-          "role": "Projet d'application console",
+          "role": "Projet d'application console, en binôme",
           "period": "Février – Juin 2024",
           "stack": "C",
           "href": "https://github.com/abdel-oue/Gestion-etudiant",
@@ -108,9 +247,27 @@
             "Une application console en C pour les dossiers étudiants : notes, modules et semestres, répartie en en-têtes par responsabilité (Structure.h, Module.h, Notes.h, Semestres.h, Fichiers.h).",
             "Les enregistrements sont persistés dans des fichiers binaires plutôt que de mourir avec le processus : les données survivent à un redémarrage.",
             "À mi-parcours, j'ai réécrit la gestion des enregistrements avec des pointeurs. Le dépôt contient encore le dossier « Backup before pointers », soit à peu près le moment où j'ai compris à quoi servaient les pointeurs."
+          ],
+          "type": "desktop",
+          "languages": [
+            "C"
           ]
         }
       ]
     }
-  ]
+  ],
+  "filters": {
+    "type": "Type",
+    "language": "Langage",
+    "all": "Tous",
+    "empty": "Aucun projet ne correspond à ces filtres.",
+    "types": {
+      "web": "Web",
+      "desktop": "Bureau",
+      "game": "Jeu",
+      "data": "Données",
+      "tooling": "Outils",
+      "systems": "Bas niveau"
+    }
+  }
 }

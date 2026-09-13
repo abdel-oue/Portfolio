@@ -12,7 +12,7 @@ export default function Skills({ skills }: { skills: Content["skills"] }) {
             className="flex flex-col gap-1 sm:flex-row sm:gap-6"
           >
             <dt className="w-36 shrink-0 opacity-60">{g.label}</dt>
-            <dd className="max-w-4xl">
+            <dd>
               {g.strong}
               {g.working && <span className="opacity-40"> · {g.working}</span>}
             </dd>

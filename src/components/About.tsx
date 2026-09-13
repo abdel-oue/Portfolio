@@ -4,7 +4,7 @@ import Section from "./Section";
 export default function About({ about }: { about: Content["about"] }) {
   return (
     <Section id="about" heading={about.heading}>
-      <div className="max-w-3xl space-y-4 text-lg">
+      <div className="space-y-4 text-lg">
         {about.paragraphs.map((p) => (
           <p key={p}>{p}</p>
         ))}
@@ -16,7 +16,7 @@ export default function About({ about }: { about: Content["about"] }) {
             className="flex flex-col gap-1 sm:flex-row sm:gap-6"
           >
             <dt className="w-28 shrink-0 opacity-60">{d.label}</dt>
-            <dd className="max-w-3xl">{d.value}</dd>
+            <dd>{d.value}</dd>
           </div>
         ))}
       </dl>

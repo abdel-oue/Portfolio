@@ -22,7 +22,7 @@
       "period": "September 2021 – June 2022"
     }
   ],
-  "certificationsHeading": "Certifications",
+  "certificationsHeading": "Certifications and formations",
   "certifications": [
     {
       "title": "Intermediate PostgreSQL — University of Michigan, Coursera (in progress)",
@@ -35,6 +35,18 @@
   ],
   "activitiesHeading": "Activities",
   "activities": [
+    {
+      "title": "Competitor, ESISA Senior Hackathon (team) — 8th place",
+      "period": "June 2025"
+    },
+    {
+      "title": "Volleyball tournament, ESISA Sports Club — finalists",
+      "period": ""
+    }
+  ],
+  "entriesHeading": "Degrees",
+  "organizationsHeading": "Organizations",
+  "organizations": [
     {
       "title": "President, ESISA Gaming Club — event organization and team coordination",
       "period": "April 2026 – Present"
@@ -50,11 +62,6 @@
     {
       "title": "Staff, ESISA Junior Hackathon 2nd Edition — co-organization and logistics",
       "period": "April 2026"
-    },
-    {
-      "title": "Competitor, ESISA Senior Hackathon (team) — 8th place",
-      "period": "June 2025"
     }
-  ],
-  "entriesHeading": "Degrees"
+  ]
 }
